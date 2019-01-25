@@ -10,7 +10,7 @@ The following is the basic object model for Quartz.
 
 There are several classes in the diagram above, but for simplicity, we'll focus on the main classes that we need to interact with to product our scheduler module.
 
-### How Jobs Are Scheduled
+## How Jobs Are Scheduled
 
 A Job is an interface implemented by components to be executed by the scheduler with the basic contract:
 ```
@@ -29,20 +29,20 @@ The scheduler is an interface that defines the contract for the Quartz Scheduler
 ### Job Scheduling Module
 The purpose of the Job Scheduling Module is to provide an easy to use interface for all microservices.
 
-##### JobScheduler
+### JobScheduler
 The JobScheduler is the facade used by all microservices to create and schedule jobs. JobBuilder is used to create jobs and the TriggerBuilder creates triggers via Quartz.
 
-##### JobAttempt
+### JobAttempt
 The JobAttempt is a custom class that implements the Job interface for Quartz. When a job is executed, it will ‘register’ the job attempt within the Quartz JobDataMap.
 
-##### JobExecutionContext
+### JobExecutionContext
 Context bundle containing handles to various environment information, that is given to JobDetail instance as it is executed, and to a Trigger instance after the execution completes.
 
-##### JobExecutionException
+### JobExecutionException
 The JobExecutionException is the implementation that makes an exception while executing a job.
 
 
-### How To Add The Scheduling Module to a Microservice
+## How To Add The Scheduling Module to a Microservice
 
 With Maven, adding in the Scheduling module is as simple as including the reference to this module in your `pom.xml` file.
 
