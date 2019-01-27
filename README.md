@@ -1,5 +1,6 @@
 # Introduction to Job Scheduling with Quartz
-
+<br>
+<br>
 ## What is Quartz?
 Quartz is an open-source job scheduling framework that can be integrated into a wide variety of applications. Applications that incorporate Quartz can reuse jobs from different events and also group multiple jobs for a single event.
 
@@ -10,6 +11,7 @@ The following is the basic object model for Quartz.
 
 There are several classes in the diagram above, but for simplicity, we'll focus on the main classes that we need to interact with to product our scheduler module.
 
+<br>
 ## Jobs
 
 A Job is an interface implemented by components to be executed by the scheduler with the basic contract:
@@ -224,6 +226,8 @@ public class SampleJob extends RetryOnceJob {
 }
 ```
 
+<br>
+<br>
 ## RetryStrategies
 
 ### DefaultRetryStrateg
@@ -243,4 +247,5 @@ An interface that identifies the contract for a JobAttempt to be scheduled for a
 <br>
 
 ## Resources
-![Quartz Documentation](http://www.quartz-scheduler.org/documentation/)
+[Quartz Documentation](http://www.quartz-scheduler.org/documentation/)
+[Quartz Tutorials](http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/)
