@@ -52,6 +52,7 @@ public class SimpleQuartzJob implements Job {
 }
 ```
 &nbsp;
+<br>
 
 `JobExecutionContext` provides the runtime context around the job instance, giving access to the scheduler and trigger.
 
@@ -80,6 +81,7 @@ The properties of a SimpleTrigger include a start-time, end-time, repeat count, 
 
 &nbsp;
 &nbsp;
+<br>
 
 The following will fire for a specific moment in time, with no repeats:
 ```
@@ -129,6 +131,7 @@ Cron-Expressions are strings made up of seven sub-expressions, that describe ind
 &nbsp;
 &nbsp;
 &nbsp;
+<br>
 
 The following will fire every day at 10:42am:
 ```
@@ -220,3 +223,24 @@ public class SampleJob extends RetryOnceJob {
    }
 }
 ```
+
+## RetryStrategies
+
+### DefaultRetryStrateg
+Does not reattempt to schedule a job, it only removed the failed Job from the scheduler.
+
+### RetryOnceStrategy
+Strategy that will schedule the failed Job to fire again using the cool down period (seconds). In essence, if the cool down period is 30 seconds and the current time is 10:30:00, the job will be scheduled to run at 10:30:30.
+
+### RecurringRetryStrategy
+Strategy that will run the job several times to a maximum as defined by the getMaximumAttempts() property. Each time the job is scheduled to run again the strategy will use the cool down period * the number of attempts as the cool down period for the next attempt. Using the algorithm the cool down period with each new attempt is increased.
+
+### RetryJob
+An interface that identifies the contract for a JobAttempt to be scheduled for another attempt should the job fail. A “RetryJob” can be either tried again via the RetryOnceJob or can have several attempts via the RecurringRetryJob subclass.
+
+&nbsp;
+&nbsp;
+<br>
+
+## Resources
+![Quartz Documentation](http://www.quartz-scheduler.org/documentation/)
