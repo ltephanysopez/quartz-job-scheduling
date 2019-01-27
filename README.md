@@ -1,4 +1,5 @@
 # Introduction to Job Scheduling with Quartz
+&nbsp;
 <br>
 <br>
 ## What is Quartz?
@@ -251,4 +252,5 @@ An interface that identifies the contract for a JobAttempt to be scheduled for a
 ## Resources
 [Quartz Documentation](http://www.quartz-scheduler.org/documentation/)
 &nbsp;
+<br>
 [Quartz Tutorials](http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/)
