@@ -11,7 +11,9 @@ The following is the basic object model for Quartz.
 
 There are several classes in the diagram above, but for simplicity, we'll focus on the main classes that we need to interact with to product our scheduler module.
 
+&nbsp;
 <br>
+
 ## Jobs
 
 A Job is an interface implemented by components to be executed by the scheduler with the basic contract:
@@ -248,4 +250,5 @@ An interface that identifies the contract for a JobAttempt to be scheduled for a
 
 ## Resources
 [Quartz Documentation](http://www.quartz-scheduler.org/documentation/)
+&nbsp;
 [Quartz Tutorials](http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/)
