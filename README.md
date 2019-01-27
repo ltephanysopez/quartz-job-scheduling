@@ -52,6 +52,7 @@ public class SimpleQuartzJob implements Job {
 }
 ```
 &nbsp;
+
 `JobExecutionContext` provides the runtime context around the job instance, giving access to the scheduler and trigger.
 
 `JobDetail` stores to job's listeners, group, data map, description, and other properties of the job.
@@ -76,6 +77,9 @@ There are two types of triggers that you are able to use with Quartz.
 ### SimpleTrigger
 Trigger that is used to execute a Job at a given moment in time, and optionally repeated at a specified interval. For instance, with SimpleTrigger you can have the trigger fire at exactly 11:23:58 AM on September 3, 2018, or if you want it to fire at that time, and then repeat 10 more times, every 30 seconds.
 The properties of a SimpleTrigger include a start-time, end-time, repeat count, and repeat interval.
+
+&nbsp;
+&nbsp;
 
 The following will fire for a specific moment in time, with no repeats:
 ```
@@ -123,6 +127,9 @@ Like SimpleTrigger, CronTrigger has a startTime which specifies when the schedul
 Cron-Expressions are strings made up of seven sub-expressions, that describe individual details of the schedule, and used to configure instances of CronTrigger. The sub-expressions are separated with white-space and represent seconds, minutes, hours, day-of-month, month, day-of-week, and year.
 
 &nbsp;
+&nbsp;
+&nbsp;
+
 The following will fire every day at 10:42am:
 ```
       trigger = newTrigger() {
