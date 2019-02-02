@@ -2,7 +2,6 @@
 
 Quartz is an open-source job scheduling framework that can be integrated into a wide variety of applications. Applications that incorporate Quartz can reuse jobs from different events and also group multiple jobs for a single event.
 
-&nbsp;
 <br>
 ### Quartz Object Model
 The following is the basic object model for Quartz.
